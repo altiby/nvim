@@ -20,3 +20,16 @@ vim.keymap.set("n", "<leader>ee", "oif err != nil {<CR>}<Esc>Oreturn err")
 vim.keymap.set("n", "<leader>ff", ":!gofmt -w %<CR><CR>")
 vim.keymap.set("n", "<leader>pp", ":!prettier -w %<CR><CR>") -- prettier formatter
 
+--[[ Поиск ]]--
+-- Игнорировать регистр при поиске
+-- Если теперь введем "IGNORE", то он найдет и "ignore"
+vim.opt.ignorecase = true
+
+-- Не игнорировать регистр, если есть символы в верхнем регистре
+-- Если напишем "Ignore", то он будет искать только "Ignore"
+vim.opt.smartcase = true
+
+-- Подсвечивать найденные текстовые объекты
+vim.opt.showmatch = true
+
+
