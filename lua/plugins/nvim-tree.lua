@@ -21,7 +21,11 @@ return {
         vim.g.loaded_netrw = 1
         vim.g.loaded_netrwPlugin = 1
 
-        nvimtree.setup({})
+        nvimtree.setup({
+            update_focused_file = {
+	            enable = true,
+            },
+        })
 
         vim.keymap.set("n", "<c-n>", ":NvimTreeFindFileToggle<CR>")
 
